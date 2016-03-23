@@ -1,0 +1,95 @@
+//font 
+@mixin raleway {
+	font-family: 'raleway', 'helvetica', sans-serif;
+}
+
+// responsive size width
+$opera: 240px;
+$featured: 360px;
+$smartphone: 480px;
+$tablet: 768px;
+$medium: 960px;
+$netbook: 1120px;
+$standart: 1280px;
+$laptop: 1366px;
+
+// color setup
+$lightblue: #69D9EC;
+$blue: #2E85F4;
+$purple: #8219AD;
+$red: #F21E1E;
+$yellow:#EAE015;
+$pink: #FB90B0;
+$darkblue: #323A45;
+$green: #00CC29;
+$orange: #EA511B;
+
+// size setup
+$paragraftext: 18px;
+$headingtext: 60px;
+
+
+@mixin netbook {
+	@media (max-width: #{$netbook}){
+		@content;
+	} 
+}
+@mixin standart {
+	@media (max-width: #{$standart}) {
+		@content;
+	}
+}
+
+@mixin medium {
+	@media (max-width:#{$medium}){
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (max-width:#{$tablet}){
+		@content;
+	}
+}
+
+@mixin featured {
+	@media (max-width:#{$featured}){
+		@content;
+	}
+}
+
+
+::selection {
+	background:#AC12D7;
+	color:#fff;
+}
+
+
+// align text
+
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.text-justify {
+	text-align: justify;
+}
+
+// casetext
+.uppercase {
+	text-transform: uppercase;
+}
+.lowercase {
+	text-transform: lowercase;
+}
+.capitalcase {
+	text-align: capitalize;
+}
+.underline {
+	text-decoration: underline;
+}

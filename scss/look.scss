@@ -1,0 +1,51 @@
+@import "config.scss";
+@import "reset.scss";
+@import "input-text.scss";
+@import "button.scss";
+@import "grid.scss";
+
+
+
+hr.margin {
+	margin:30px 0;
+}
+
+.form {
+	padding:20px;
+	.grouping {
+		margin:10px 0;
+		padding:0px 0px;
+
+		label {
+			font-weight: 600;
+			color:#777;
+			margin-top:12px;
+			display: block;
+			font-size: 16px;
+			-webkit-user-select:none;
+			-moz-user-select:none;
+			user-select:none;
+		}
+		@include tablet {
+			padding:0px;
+			width:95%;
+		}
+	}
+}
+
+.grouping {
+	margin:10px 0;
+	padding:0 10px;
+
+
+	figcaption {
+		@include raleway;
+		font-size:20px;
+		font-weight: 900;
+		padding:10px 0;
+		color:#555;
+	}
+	@include tablet {
+		padding:10px 50px;
+	}
+}

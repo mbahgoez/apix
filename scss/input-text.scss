@@ -1,0 +1,162 @@
+@import "ionicons.min.css";
+fieldset {
+	border:none;
+	margin-top: 10px;
+	padding-top:10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	user-select:none;
+	cursor:default;
+	// border-bottom:1px solid #ccc;
+	@include featured {
+		padding-left: 0;
+		padding:10px 10px;
+	}
+	@include tablet {
+		padding-left:0;
+	}
+
+	legend {
+		font-size: 20px;
+		color:#555;
+		font-weight: 900;
+	}
+}
+
+input[type="text"], input[type="password"] {
+
+}
+
+
+.form {
+	input[type="text"], input[type="password"] {
+		padding:5px 10px;
+		margin:5px 0;
+		width:100%;
+		border:1px solid #ccc;
+		border-radius: 3px;
+		font-weight:600;
+		font-family:sans-serif;
+		color:#555;
+
+		&:focus {
+			outline: none;
+			border:1px solid #aaa;
+		}
+
+		&::-webkit-input-placeholder {
+			font-weight: 100;
+			font-family: 'helvetica', sans-serif;
+		}
+	}
+}
+
+label {
+	font-weight: 600;
+	color:#777;
+	margin-top:12px;
+	display: block;
+	font-size: 16px;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	user-select:none;
+}
+
+input[type="text"].input, input[type="password"].input {
+	width:100%;
+	padding:10px;
+	border:2px solid #ccc;
+	border-radius:3px;
+	font-family:'helvetica', sans-serif;
+	font-weight:600;
+	color:#777;
+	margin:6px 0;
+	display: block;
+	
+	&::-webkit-input-placeholder {
+		color:#999;
+		font-weight:300;
+		font-family: 'raleway';
+	}
+	&:focus {
+		outline:none;
+		border:2px solid #ccc;
+	}
+
+	&.shadow {
+		border:none;
+		background: #f8f8f8;
+		box-shadow:0 1px 1px 0 #ccc;
+
+		&::after {
+			content:"";
+		}
+	}
+
+	
+
+	@mixin placeholder($color){
+		&::-webkit-input-placeholder {
+			color:$color;
+		}
+	}
+
+	@mixin input-color($color) {
+		border:1.6px solid $color;
+		color:$color;
+		@include placeholder($color)
+	}
+
+
+	&.input-red {
+		@include input-color($red);
+	}	
+	&.input-blue {
+		@include input-color($blue);
+	}
+	&.input-purple {
+		@include input-color($purple);
+	}
+	&.input-green {
+		@include input-color($green);
+	}
+	&.input-yellow {
+		@include input-color($yellow);
+	}
+}
+
+
+
+
+input[type="checkbox"] {
+	display: none;
+
+	&:checked + span {
+
+		&:before {
+			color:$darkblue;
+			font-family: "ionicons";
+			content:"\f373";
+		}
+	}
+}
+input[type="checkbox"]+span {
+	color:#333;
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	user-select:none;
+
+
+	&::before {
+		font-size: 20px;
+		font-family: "ionicons";
+		content:"\f372";
+		margin-right: 15px;
+	}
+}
+
+
+

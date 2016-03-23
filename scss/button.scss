@@ -1,0 +1,118 @@
+	@mixin button-style($color){
+		background: $color;
+		color:#fff;
+		transition: all .1s ease;
+		border:2px solid $color;
+		&:hover {
+			background:darken($color, 5%);
+			border:2px solid darken($color, 5%);
+		}
+
+		&.outline {
+			background: transparent;
+			border:2px solid $color;
+			color:$color;
+
+			&:focus {
+				border:2px solid $color;
+				background: $color;
+				color:#fff;
+			}
+		}
+	}
+
+button {
+	padding:8px 10px;
+	background:#999;
+	box-shadow:0 1px 3px 0 #ccc;
+	border:none;
+	color:#fff;
+	font-size:12px;
+	font-weight: 900;
+	font-family: 'helvetica', sans-serif;
+	border-radius: 3px;
+	cursor:default;
+	user-select:none;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	&:focus {
+		outline:none;
+	}
+
+
+	&.btn-red {
+		@include button-style($red);
+	}
+	&.btn-blue {
+		@include button-style($blue);
+	}
+	&.btn-yellow {
+		@include button-style($yellow);
+	}
+	&.btn-green {
+		@include button-style($green);
+	}
+	&.btn-purple {
+		@include button-style($purple);
+	}
+
+}
+
+button.btn {
+	margin:6px 0;
+	background:#999;
+	padding:14px;
+	border:none;
+	font-family:sans-serif;
+	font-size:15px;
+	color:#fff;
+	letter-spacing:1px;
+	font-weight:600;
+	border-radius: 3px;
+	box-shadow:0 1px 1px 0 #999;
+	transition:all .1s ease;
+	position: relative;
+	&:hover {
+		background:#bbb;
+	}
+	&:focus {
+		outline:none;
+		background:#aaa;
+		color:#fff;
+	}
+
+
+	&.btn-full {
+		padding:12px;
+		width:100%;
+	}
+	&.outline {
+		background: transparent;
+		border:2px solid #999;
+		color:#999;
+		box-shadow: none;
+		&:focus {
+			background:#999;
+			color:#fff;
+		}
+	}
+
+
+	&.btn-blue {
+		@include button-style($blue);
+	}
+	&.btn-red {
+		@include button-style($red);
+	}
+	&.btn-yellow {
+		@include button-style($yellow);
+	}
+	&.btn-green {
+		@include button-style($green);
+	}
+	&.btn-purple {
+		@include button-style($purple);
+	}
+	
+
+}

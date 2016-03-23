@@ -1,0 +1,27 @@
+{
+  "name": "apixcss",
+  "version": "1.0.0",
+  "description": "a framework css with rich component",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbahgoez/apixcss.git"
+  },
+  "author": "Bagus Mantonafi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mbahgoez/apixcss/issues"
+  },
+  "homepage": "https://github.com/mbahgoez/apixcss#readme"
+}

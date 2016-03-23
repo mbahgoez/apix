@@ -1,0 +1,263 @@
+$gutter: 20px;
+
+@mixin col($col) {
+	width:(100%/12)* $col;
+}
+
+@mixin push($col){
+	left:(100%/12)* $col;
+}
+
+
+@mixin test {
+	height:100px;
+	background:#ccc;
+}
+
+
+// .row:after {
+// 	visibility: hidden;
+// 	display: block;
+// 	// font-size: 0;
+// 	content:"";
+// 	clear:both;
+// 	// height:0;
+// }
+
+
+
+.col.test {
+	@include test;
+}
+
+// hr.clearfix {
+// 	clear:both;
+// }
+.container {
+	width:100%;
+	clear:both;
+	
+
+
+	&.w1280 {
+		margin:0 auto;
+		width:1280px;
+
+		@include standart {
+			width:100%;
+		}
+	}
+	&.w1200 {
+		margin:0 auto;
+		width:1280px - (80px * 1);
+
+		@include netbook {
+			width:100%;
+		}
+	}
+	&.w1120 {
+		margin:0 auto;
+		width:1280px - (80px * 2);
+
+		@include netbook {
+			width:100%;
+		}
+	}
+	&.w960 {
+		margin:0 auto;
+		width:1280 - (80px * 4);
+		@include medium {
+			width:100%;
+		}
+	}
+
+	// &::after {
+	// 	clear:both;
+	// 	width:100%;
+	// 	left:0;
+	// 	top:100%;
+	// 	height:1px;
+	// 	position: absolute;
+	// }
+
+	.row {
+		padding:0px 10px;
+		position: relative;
+		display: block;
+
+		@include tablet {
+			padding:0px 0px;
+		}
+
+		&:after {
+			content:"";
+			display: block;
+			clear:both;
+		}
+
+		
+
+		.col {
+			position: relative;
+			float:left;
+			padding:0px;
+			display: block;
+
+			&.lg-1 {
+				@include col(1);
+				@include tablet {
+					width:100%;
+				}
+			}
+			&.lg-2 {
+				@include col(2);
+				@include tablet {
+					width:100%;
+				}
+			}
+			&.lg-3 {
+				@include col(3);
+				@include tablet {
+					width:100%;
+				}
+			}
+			&.lg-4 {
+				@include col(4);
+				@include tablet {
+					width:100%;
+				}
+			}
+			&.lg-5 {
+				@include col(5);
+				@include tablet {
+					width:100%;
+				}
+			}
+			&.lg-6 {
+				@include col(6);
+				@include tablet {
+					width:100%;
+				}
+			}
+			@include tablet {
+					width:100%;
+				}
+			&.lg-7 {
+				@include col(7);
+				@include tablet {
+					width:100%;
+				}
+			}
+			@include tablet {
+					width:100%;
+					@include tablet {
+					width:100%;
+				}
+				}
+			&.lg-8 {
+				@include col(8);
+				@include tablet {
+					width:100%;
+				}
+			}
+			&.lg-9 {
+				@include col(9);
+				@include tablet {
+					width:100%;
+				}
+			}
+			&.lg-10 {
+				@include col(10);
+				@include tablet {
+					width:100%;
+				}
+			}
+			&.lg-11 {
+				@include col(11);
+				@include tablet {
+					width:100%;
+				}
+			}
+			&.lg-12 {
+				@include col(12);
+				@include tablet {
+					width:100%;
+				}
+			}
+
+
+			&.lg-push-1 {
+				@include push(1);
+				@include tablet {
+					left:0;
+				}
+			}
+			&.lg-push-2 {
+				@include push(2);
+				@include tablet {
+					left:0;
+				}
+			}
+			&.lg-push-3 {
+				@include push(3);
+				@include tablet {
+					left:0;
+				}
+			}
+			&.lg-push-4 {
+				@include push(4);
+				@include tablet {
+					left:0;
+				}
+			}
+			&.lg-push-5 {
+				@include push(5);
+				@include tablet {
+					left:0;
+				}
+			}
+			&.lg-push-6 {
+				@include push(6);
+				@include tablet {
+					left:0;
+				}
+			}
+			&.lg-push-7 {
+				@include push(7);
+				@include tablet {
+					left:0;
+				}
+			}
+			&.lg-push-8 {
+				@include push(8);
+				@include tablet {
+					left:0;
+				}
+			}
+			&.lg-push-9 {
+				@include push(9);
+				@include tablet {
+					left:0;
+				}
+			}
+			&.lg-push-10 {
+				@include push(10);
+				@include tablet {
+					left:0;
+				}
+			}
+			&.lg-push-11 {
+				@include push(11);
+				@include tablet {
+					left:0;
+				}
+			}
+			&.lg-push-12 {
+				@include push(12);
+				@include tablet {
+					left:0;
+				}
+			}
+		}
+	}
+}
